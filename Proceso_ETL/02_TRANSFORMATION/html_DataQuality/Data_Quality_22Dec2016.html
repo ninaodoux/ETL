@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}th{text-align: left;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="4"><pre><code>Data_Quality_22Dec2016</code></pre></th></tr><tr><th>Metric</th><th>Description</th><th>Value</th><th>Observation</th></tr><tr class="odd"><td>Completitud</td><td>Porcentaje promedio de datos no faltantes en todas las columnas.</td><td>81.63</td><td>Se verifica la completitud general del dataset con el promedio de regirstros de cada variable.</td></tr>
+<tr><td>Accuracy</td><td>Promedio de accuracy basado en ventas no negativas y precisas y rango lógico del año de lanzamiento.</td><td>89.41</td><td>Se verifica la precision de los datos de ventas y de Year.</td></tr>
+<tr class="odd"><td>Semantica</td><td>Promedio de validez basado en ventas no negativas, scorings en el rango y valores validos que existen en Rating.</td><td>97.87</td><td>Verificacion del sentido de las variables, de sus rangos, de acuerdo con el data catalog y la logica.</td></tr>
+<tr><td>Estructura</td><td>Promedio de validez basado en tipo de datos y formato de columnas, ignorando valores NULL.</td><td>67.05</td><td>Los valores que no cumplen serán normalizados en el proceso de limpieza.</td></tr>
+<tr class="odd"><td>Moneda</td><td>No aplica porque no existen valores monetarios en este dataset.</td><td>&nbsp;</td><td>Esta métrica no es relevante para este análisis.</td></tr>
+<tr><td>Puntualidad</td><td>No aplica en este caso, ya que no hay campos que requieran actualizacion.</td><td>&nbsp;</td><td>El dataset contiene datos de fecha de lanzamiento y no requiere evaluacion de puntualidad.</td></tr>
+<tr class="odd"><td>Linaje</td><td>Porcentaje de rastreabilidad fiable en la tabla.</td><td>100</td><td>El linaje es completo gracias a la columna Name, que permite rastrear valores faltantes con fuentes externas.</td></tr>
+<tr><td>Consistencia</td><td>Porcentaje de registros donde las ventas globales coinciden con la suma de las ventas regionales.</td><td>59.24</td><td>Nos da insights sobre la consistencia de los datos de ventas, sobre el total global.</td></tr>
+<tr class="odd"><td>Identificabilidad</td><td>Porcentaje de registros unicos basados en Name, Year_of_Release y Platform cuando todas las columnas están completas.</td><td>99.99</td><td>La identificabilidad se asegura si los registros únicos basados en Name, Year_of_Release y Platform superan el 95%.</td></tr>
+<tr><td>Razonabilidad</td><td>Promedio de razonabilidad basado en consistencia de ventas y puntajes en un rango establecido.</td><td>94.71</td><td></td></tr>
+<tr class="odd"><td>TOTAL</td><td>Promedio de todas las metricas de calidad.</td><td>86.89</td><td></td></tr>
+</table></body></html>

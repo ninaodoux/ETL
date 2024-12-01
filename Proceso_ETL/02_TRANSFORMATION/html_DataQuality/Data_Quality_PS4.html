@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}th{text-align: left;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="4"><pre><code>Data_Quality_PS4</code></pre></th></tr><tr><th>Metric</th><th>Description</th><th>Value</th><th>Observations</th></tr><tr class="odd"><td>Completitud</td><td>Media del porcentaje de datos no nulos para todas las columnas.</td><td>95.51</td><td>&nbsp;</td></tr>
+<tr><td>Accuracy</td><td>Media del porcentaje de valores correctos para las métricas de Year y Global Sales(las unicas que podemo sverificar).</td><td>73.11</td><td>Incluye la precisión de Year y Global Sales.</td></tr>
+<tr class="odd"><td>Linaje</td><td>Porcentaje de rastreabilidad fiable en la tabla.</td><td>100</td><td>El linaje es completo gracias a la columna Game, que permite rastrear valores faltantes con fuentes externas.</td></tr>
+<tr><td>Semantica </td><td>Porcentaje de filas con datos validos semánticamente (ventas no negativas, Publisher válido y Year dentro del rango logico).</td><td>79.79</td><td>Incluye verificaciones para ventas no negativas, Publisher válido y Year dentro del rango lógico (de 1950: decade de creacion del primer videojuego, hasta ahora).</td></tr>
+<tr class="odd"><td>Estructura</td><td>Promedio de validez estructural basado en columnas Year, Publisher y Genre.</td><td>59.93</td><td>Incluye validación de Year con un tipo DATE, Publisher con mayúscula o número inicial, y Genre comenzando con una mayúscula, los numerico ya estan todos en decimales (.2) con las normativas de la tabla.</td></tr>
+<tr><td>Consistencia</td><td>Porcentaje de filas donde la suma de ventas regionales coincide con las ventas globales.</td><td>66.44</td><td>Verifica que las ventas en North America, Europe, Japan y Rest of World sumen correctamente a Global para que sea un total justo.</td></tr>
+<tr class="odd"><td>Moneda</td><td>Esta métrica no aplica aqui porque los valores no representan datos monetarios ni cuya medida puede cambiar a lo largo del tiempo </td><td>&nbsp;</td><td>No es relevante calcular esta métrica para los datos actuales.</td></tr>
+<tr><td>Puntualidad</td><td>Esta métrica no aplica aqui el dataset no trata de actualizaciones obligatorias o rangos temporales precisos de ventas</td><td>&nbsp;</td><td>No es relevante calcular esta métrica para los datos actuales.</td></tr>
+<tr class="odd"><td>Identificabilidad</td><td>Porcentaje de filas únicas en funcion de Game y Year como indicatores.</td><td>99.9</td><td>Identifica duplicados considerando juegos con el mismo nombre y la misma fecha de lanzamiento.</td></tr>
+<tr><td>Razonabilidad</td><td>Promedio de razonabilidad basado en consistencia de ventas y rangos razonables (0-50 millones).</td><td>83.37</td><td>Los valores fuera del rango 0-50 millones serán revisados durante el proceso de limpieza.</td></tr>
+<tr class="odd"><td>TOTAL</td><td>PROMEDIO DE CALIDAD GLOBAL BASADO EN VALORES DE METRICAS OBTENIDAS</td><td>82.26</td><td>&nbsp;</td></tr>
+</table></body></html>

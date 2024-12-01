@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}th{text-align: left;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="4"><pre><code>Data_Quality_Xbox</code></pre></th></tr><tr><th>Metric</th><th>Description</th><th>Value</th><th>Observation</th></tr><tr class="odd"><td>Completitud</td><td>Promedio de completitud para cada variable</td><td>96.48</td><td></td></tr>
+<tr><td>Accuracy</td><td>Promedio de precision de la variable Year.</td><td>82.38</td><td>Incluye valores dentro del rango, es la unica metrica que podemos verificar con los recursos que tenemos</td></tr>
+<tr class="odd"><td>Linaje</td><td>Porcentaje de rastreabilidad fiable en la tabla.</td><td>100</td><td>El linaje es completo gracias a la columna Game, que permite rastrear valores faltantes con fuentes externas.</td></tr>
+<tr><td>Semantica</td><td>Porcentaje de filas con datos validos semánticamente (ventas no negativas,y Publisher valido).</td><td>82.38</td><td>Verificaciones de ventas no negativas y Publisher válido.</td></tr>
+<tr class="odd"><td>Estructura</td><td>Promedio de validez estructural basado en las normas establecidas.</td><td>70.47</td><td>Validación de Year con tipo DATE, variables textuales con primer caracter en mayúscula o número inicial.</td></tr>
+<tr><td>Consistencia</td><td>Porcentaje de filas donde las ventas Global coinciden con la suma de las ventas para cada region.</td><td>64.27</td><td>Verificación realizada sobre ventas globales y regionales para asegurar la coherencia de datos.</td></tr>
+<tr class="odd"><td>Moneda</td><td>Esta métrica no aplica aqui porque los valores no representan datos monetarios ni cuya medida puede cambiar a lo largo del tiempo </td><td>&nbsp;</td><td>No es relevante calcular esta métrica para los datos actuales.</td></tr>
+<tr><td>Puntualidad</td><td>Esta métrica no aplica aqui el dataset no trata de actualizaciones obligatorias o rangos temporales precisos de ventas</td><td>&nbsp;</td><td>No es relevante calcular esta métrica para los datos actuales.</td></tr>
+<tr class="odd"><td>Identificabilidad</td><td>Porcentaje de registros unicos basados en Game y si Year es distinto.</td><td>100</td><td>Se considera duplicado si Game y Year son iguales en varias filas.</td></tr>
+<tr><td>Razonabilidad</td><td>Promedio de razonabilidad basado en consistencia de ventas y rangos razonables (0-50 millones).</td><td>82.22</td><td>Los valores fuera del rango 0-50 millones serán revisados durante el proceso de limpieza.</td></tr>
+<tr class="odd"><td>TOTAL</td><td>PROMEDIO DE CALIDAD GLOBAL BASADO EN VALORES DE METRICAS OBTENIDAS</td><td>84.78</td><td>&nbsp;</td></tr>
+</table></body></html>
